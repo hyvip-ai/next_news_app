@@ -21,7 +21,7 @@ function EOM(props) {
 }
 
 export async function getServerSideProps(context){
-    const apiResponse = await fetch('https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth');
+    const apiResponse = await fetch('https://my-json-server.typicode.com/hyvip-ai/next_news_app/employeeOfTheMonth');
     const employee = await apiResponse.json()
     return {
         props:{
