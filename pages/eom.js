@@ -1,10 +1,26 @@
 import React from 'react'
 import Toolbar from '../components/Tool-bar';
+import Head from 'next/head'
 //isomorphic javascript
 import classes from '../styles/eom.module.css'
 function EOM(props) {
     console.log(props.employee)
     return (
+        <>
+              <Head>
+        <title>Employee Of The Month</title>
+        <meta
+          name="description"
+          content={`This month's employee of the month is ${props.employee.name}`}
+        />
+
+        <meta property="og:image" content={props.employee.image} />
+        <meta property="og:title" content="Employee Of The Month" />
+        <meta
+          property="og:description"
+          content={`This month's employee of the month is ${props.employee.name}`}
+        />
+      </Head>
         <div className='page-container'>
             <Toolbar/>
             <div className={classes.main}>
@@ -17,6 +33,7 @@ function EOM(props) {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
