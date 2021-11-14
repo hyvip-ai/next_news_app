@@ -1,8 +1,8 @@
 {
-    "employeeOfTheMonth":{
-        "name":"Rajat Mondal",
-        "position":"Software Developer",
-        "image":"https://avatars.githubusercontent.com/u/74717766?s=400&u=d17259f0e6d89fe1bd40229395db01aae39a9507&v=4",
-        "description":"Just a Geek , Web Developer , Programmer"
-    }
+  "employeeOfTheMonth": {
+    "name": "Rajat Mondal",
+    "position": "Software Developer",
+    "image": "https://avatars.githubusercontent.com/u/74717766?s=400&u=d17259f0e6d89fe1bd40229395db01aae39a9507&v=4",
+    "description": "Just a Geek , Web Developer , Programmer"
+  }
 }

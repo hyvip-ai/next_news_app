@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "../../styles/feed.module.css";
-import Toolbar from '../../components/Tool-bar'
+import Toolbar from "../../components/Tool-bar";
 function Feed(props) {
-    const router = useRouter()
-//   console.log(props.articles, props.pageNumber);
+  const router = useRouter();
+  //   console.log(props.articles, props.pageNumber);
   return (
     <div className="page-container">
-        <Toolbar/>
+      <Toolbar />
       <div className={styles.main}>
         {props.articles.map((item, index) => {
           return (
@@ -28,10 +28,23 @@ function Feed(props) {
         })}
       </div>
       <div className={styles.paginator}>
-            <div className={props.pageNumber===1?styles.disabled:styles.active} onClick={()=>{router.push(`/feed/${props.pageNumber-1}`)}}>Previous Page</div>
-            <div>#{props.pageNumber}</div>
-            <div className={props.pageNumber===5?styles.disabled:styles.active} onClick={()=>{router.push(`/feed/${props.pageNumber+1}`)}}>Next Page</div>
-
+        <div
+          className={props.pageNumber === 1 ? styles.disabled : styles.active}
+          onClick={() => {
+            router.push(`/feed/${props.pageNumber - 1}`);
+          }}
+        >
+          Previous Page
+        </div>
+        <div>#{props.pageNumber}</div>
+        <div
+          className={props.pageNumber === 5 ? styles.disabled : styles.active}
+          onClick={() => {
+            router.push(`/feed/${props.pageNumber + 1}`);
+          }}
+        >
+          Next Page
+        </div>
       </div>
     </div>
   );
